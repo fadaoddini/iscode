@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="{% url 'add-lesson-web' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="">
+                            <div class="row row-sm">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <div class="row  bg-light rounded pt-3">
+                                                <div class="col-lg-4 form-group">
+                                                    <label class="form-label">
+                                                        عنوان : <span class="tx-danger">*</span>
+                                                    </label>
+                                                    {% render_field form_lesson.title class="form-control" %}
+                                                </div>
+                                                <div class="col-lg-8 form-group">
+                                                    <label class="form-label">
+                                                        بخش مربوط به آموزش را مشخص کنید : <span class="tx-danger">*</span>
+                                                    </label>
+                                                    {% render_field form_lesson.section class="form-control" %}
+                                                </div>
+                                                <div class="col-lg-12 form-group">
+                                                    <label class="form-label">
+                                                        توضیحات :
+                                                    </label>
+                                                    {% render_field form_lesson.description class="form-control" %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="row">
+
+
+                                                <div class="col-lg-12 form-group">
+                                                    <label class="form-label">
+                                                        تصویر مربوط به آموزش <span class="tx-danger">*</span>
+                                                    </label>
+                                                    {% render_field form_lesson.image class="dropify" %}
+                                                </div>
+                                                <div class="col-lg-12 form-group">
+                                                    <label class="form-label">
+                                                        ویدئو و یا فایل مربوط به آموزش <span class="tx-danger">*</span>
+                                                    </label>
+                                                    {% render_field form_lesson.video class="dropify" %}
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <button class="btn ripple btn-main-primary btn-block" type="submit">افزودن</button>
+                        </div>
+                    </form>
+</body>
+</html>

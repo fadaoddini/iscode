@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content=""/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>
+        پروگرمیت | تائید کد
+    </title>
+
+    <!-- Custom CSS -->
+    <link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+
+    <!-- Custom Color Option -->
+    <link href="{% static 'assets/css/colors.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="log-bg rtl">
+
+<!-- ============================================================== -->
+<!-- Preloader - style you can find in spinners.css -->
+<!-- ============================================================== -->
+<div id="preloader">
+    <div class="preloader"><span></span><span></span></div>
+</div>
+
+
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper">
+{% if messages %}
+        <section class="connect-wallet-area pt-130 pb-120">
+        <div class="container">
+            <div class="connect-wallet-wrapper">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+
+
+                        {% for message in messages %}
+                        <div class="alert alert-{{message.tags}}" role="alert">
+                            <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    {% endif %}
+    <!-- ========================== SignUp Elements ============================= -->
+    <section class="log-space">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-centered">
+
+
+                    <div class="log_wraps text-center">
+                        <a href="{% url 'index' %}" class="mb-3"><img src="{% static 'assets/img/logo.png' %}"
+                                                                      class="img-fluid" width="80" alt=""/></a>
+                        <div class="mb-5">
+                            <h4 class="mt-0 ">تائید کد ارسال شده <span class="theme-cl"></span></h4>
+                        </div>
+                        <form method="post" action="{% url 'verify-otp' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label>کد تائید</label>
+                                <input style="    text-align: center;
+    font-size: 18px;" type="number" class="form-control" name="otp">
+                            </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn_success w-100">ارسال</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================== Login Elements ============================= -->
+
+
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/select2.min.js' %}"></script>
+<script src="{% static 'assets/js/slick.js' %}"></script>
+<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'assets/js/counterup.min.js' %}"></script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{% load category_tags %}
+
+{% get_category as categories %}
+<ul class="nav-menu">
+    <li class="active"><a href="{% url 'index' %}">صفحه اصلی</a></li>
+    {%for cat in categories %}
+    <li><a href="#">{{ cat.name }}</a></li>
+    {%endfor %}
+</ul>
+
+<ul class="nav-menu nav-menu-social align-to-left">
+
+    {% if userinfo is None %}
+    <li class="login_click bg-red">
+        <a href="{% url 'mylogin' %}">ورود</a>
+    </li>
+
+    {% else %}
+
+    <li class="login_click">
+        <a href="{% url 'logout' %}" >خروج</a>
+    </li>
+    {% endif %}
+</ul>

@@ -1,0 +1,117 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title%}
+تبدیل گفتار به متن
+{% endblock%}
+
+{% block style %}
+<style>
+
+
+button {
+	width: 35px;
+	height: 35px;
+	font-size: 0;
+	background-color: red;
+	border: 0;
+	border-radius: 35px;
+	margin: 18px;
+	outline: none;
+}
+
+.notRec{
+	background-color: darkred;
+}
+
+.Rec{
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse{
+	0%{
+		box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+	}
+	65%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+	}
+	90%{
+		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+	}
+}
+
+
+</style>
+{% endblock %}
+
+{% block content%}
+
+
+<div class="trips_wrap full colored">
+    <div class="container">
+        <div class="row m-0">
+
+            <div class="col-lg-12">
+                {% if messages %}
+                <section class="connect-wallet-area pt-130 pb-120">
+                    <div class="container">
+                        <div class="connect-wallet-wrapper">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12">
+
+
+                                    {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}" role="alert">
+                                        <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                {% endif %}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- ============================ Trips Facts Start ================================== -->
+
+<!-- ============================ Featured Courses Start ================================== -->
+<section class="gray-bg">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <div class="sec-heading center">
+
+                    {%if text is not None %}
+                    {{ text }}
+                    {%endif%}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- ============================ Featured Courses End ================================== -->
+
+
+{% endblock%}
+
+
+{% block java %}
+
+{% endblock%}
+

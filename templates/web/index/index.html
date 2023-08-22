@@ -1,0 +1,449 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block title%}
+صفحه نخست
+{% endblock%}
+
+{% block content%}
+
+  <!-- ============================ Hero Banner  Start================================== -->
+    <div class="image-cover hero_banner" style="background:#fff5eb;">
+        <div class="container">
+            <!-- Type -->
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="banner-search-2 transparent">
+                        <h1 class="big-header-capt cl_2 mb-2">پروگـــــــــــرمیت<br>متفاوت در آموزش </h1>
+                        <p>آموزش مبتنی بر متن و فیلم بدون توضیح</p>
+                        <div class="mt-4">
+                            <div class="banner-search shadow_high">
+                                <div class="search_hero_wrapping">
+                                    <div class="row">
+
+                                        <div class="col-lg-10 col-md-10 col-sm-12">
+                                            <div class="form-group">
+                                                <div class="input-with-icon">
+                                                    <input type="text" class="form-control"
+                                                           placeholder="نام دوره آموزشی">
+                                                    <img src="{% static 'assets/img/search.svg' %}" class="search-icon" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-2 col-md-2 col-sm-12 pr-0">
+                                            <div class="form-group none">
+                                                <a href="#" class="btn search-btn full-width">جستجو</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="flixio pt-5">
+                        <img class="img-fluid" src="{% static 'assets/img/6518.png' %}" alt="programit">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ============================ Hero Banner End ================================== -->
+
+    <!-- ============================ Trips Facts Start ================================== -->
+    <div class="trips_wrap full colored">
+        <div class="container">
+            <div class="row m-0">
+
+                <div class="col-lg-12">
+ {% if messages %}
+        <section class="connect-wallet-area pt-130 pb-120">
+        <div class="container">
+            <div class="connect-wallet-wrapper">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+
+
+                        {% for message in messages %}
+                        <div class="alert alert-{{message.tags}}" role="alert">
+                            <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    {% endif %}
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- ============================ Trips Facts Start ================================== -->
+
+
+
+    <!-- ============================ Featured Courses Start ================================== -->
+    <section class="gray-bg">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <div class="sec-heading center">
+                        <p>دسته بندی های منتخب</p>
+                        <h2>محبوب ترین <span class="theme-cl">دوره ها</span></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Cource Grid 1 -->
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="education_block_list_layout">
+
+                        <div class="education_block_thumb n-shadow">
+                            <a href="course-detail.html"><img src="assets/img/co-2.jpg" class="img-fluid" alt=""></a>
+                        </div>
+
+                        <div class="list_layout_ecucation_caption">
+
+                            <div class="education_block_body">
+                                <h4 class="bl-title"><a href="course-detail.html">آموزش کار با وکتور در فتوشاپ</a></h4>
+                                <div class="course_rate_system">
+                                    <div class="course_ratting">
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="course_reviews_info">
+                                        <strong class="high">4.7</strong>(2,420 امتیاز ثبت شده)
+                                    </div>
+                                </div>
+                                <div class="cources_price">138ت
+                                    <div class="less_offer">199ت</div>
+                                </div>
+                            </div>
+
+                            <div class="education_block_footer mt-3">
+                                <div class="education_block_author">
+                                    <div class="path-img"><a href="instructor-detail.html"><img
+                                            src="assets/img/user-1.jpg" class="img-fluid" alt=""></a></div>
+                                    <h5><a href="instructor-detail.html">مهرداد نوروزی</a></h5>
+                                </div>
+                                <div class="cources_info_style3">
+                                    <ul>
+                                        <li>
+                                            <div class="foot_lecture"><i class="ti-control-skip-forward ml-2"></i>54
+                                                دوره
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cource Grid 1 -->
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="education_block_list_layout">
+
+                        <div class="education_block_thumb n-shadow">
+                            <a href="course-detail.html"><img src="assets/img/co-3.jpg" class="img-fluid" alt=""></a>
+                        </div>
+
+                        <div class="list_layout_ecucation_caption">
+
+                            <div class="education_block_body">
+                                <h4 class="bl-title"><a href="course-detail.html">آموزش تبدیل PSD به HTML (یک)</a></h4>
+                                <div class="course_rate_system">
+                                    <div class="course_ratting">
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="course_reviews_info">
+                                        <strong class="mid">4.8</strong>(2,300 امتیاز ثبت شده)
+                                    </div>
+                                </div>
+                                <div class="cources_price">523ت
+                                    <div class="less_offer">872ت</div>
+                                </div>
+                            </div>
+
+                            <div class="education_block_footer mt-3">
+                                <div class="education_block_author">
+                                    <div class="path-img"><a href="instructor-detail.html"><img
+                                            src="assets/img/user-2.jpg" class="img-fluid" alt=""></a></div>
+                                    <h5><a href="instructor-detail.html">پریسا نصرتی</a></h5>
+                                </div>
+                                <div class="cources_info_style3">
+                                    <ul>
+                                        <li>
+                                            <div class="foot_lecture"><i class="ti-control-skip-forward ml-2"></i>14
+                                                دوره
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cource Grid 1 -->
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="education_block_list_layout">
+
+                        <div class="education_block_thumb n-shadow">
+                            <a href="course-detail.html"><img src="assets/img/co-4.jpg" class="img-fluid" alt=""></a>
+                        </div>
+
+                        <div class="list_layout_ecucation_caption">
+
+                            <div class="education_block_body">
+                                <h4 class="bl-title"><a href="course-detail.html">آموزش برنامه نویسی‌اندروید</a></h4>
+                                <div class="course_rate_system">
+                                    <div class="course_ratting">
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="course_reviews_info">
+                                        <strong class="good">4.2</strong>(810امتیاز ثبت شده)
+                                    </div>
+                                </div>
+                                <div class="cources_price">365ت
+                                    <div class="less_offer">429ت</div>
+                                </div>
+                            </div>
+
+                            <div class="education_block_footer mt-3">
+                                <div class="education_block_author">
+                                    <div class="path-img"><a href="instructor-detail.html"><img
+                                            src="assets/img/user-3.jpg" class="img-fluid" alt=""></a></div>
+                                    <h5><a href="instructor-detail.html">علی خسروجردی</a></h5>
+                                </div>
+                                <div class="cources_info_style3">
+                                    <ul>
+                                        <li>
+                                            <div class="foot_lecture"><i class="ti-control-skip-forward ml-2"></i>25
+                                                دوره
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cource Grid 1 -->
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="education_block_list_layout">
+
+                        <div class="education_block_thumb n-shadow">
+                            <a href="course-detail.html"><img src="assets/img/co-5.jpg" class="img-fluid" alt=""></a>
+                        </div>
+
+                        <div class="list_layout_ecucation_caption">
+
+                            <div class="education_block_body">
+                                <h4 class="bl-title"><a href="course-detail.html">آموزش ساخت ربات تلگرام با PHP</a></h4>
+                                <div class="course_rate_system">
+                                    <div class="course_ratting">
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="course_reviews_info">
+                                        <strong class="mid">4.3</strong>(3,122 امتیاز ثبت شده)
+                                    </div>
+                                </div>
+                                <div class="cources_price">620ت
+                                    <div class="less_offer">503ت</div>
+                                </div>
+                            </div>
+
+                            <div class="education_block_footer mt-3">
+                                <div class="education_block_author">
+                                    <div class="path-img"><a href="instructor-detail.html"><img
+                                            src="assets/img/user-4.jpg" class="img-fluid" alt=""></a></div>
+                                    <h5><a href="instructor-detail.html">نازنین عبدی</a></h5>
+                                </div>
+                                <div class="cources_info_style3">
+                                    <ul>
+                                        <li>
+                                            <div class="foot_lecture"><i class="ti-control-skip-forward ml-2"></i>54
+                                                دوره
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cource Grid 1 -->
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="education_block_list_layout">
+
+                        <div class="education_block_thumb n-shadow">
+                            <a href="course-detail.html"><img src="assets/img/co-6.jpg" class="img-fluid" alt=""></a>
+                        </div>
+
+                        <div class="list_layout_ecucation_caption">
+
+                            <div class="education_block_body">
+                                <h4 class="bl-title"><a href="course-detail.html">آموزش ASP.Net - ساخت سایت شخصی</a>
+                                </h4>
+                                <div class="course_rate_system">
+                                    <div class="course_ratting">
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="course_reviews_info">
+                                        <strong class="good">4.5</strong>(2,540 امتیاز ثبت شده)
+                                    </div>
+                                </div>
+                                <div class="cources_price">750ت
+                                    <div class="less_offer">963ت</div>
+                                </div>
+                            </div>
+
+                            <div class="education_block_footer mt-3">
+                                <div class="education_block_author">
+                                    <div class="path-img"><a href="instructor-detail.html"><img
+                                            src="assets/img/user-5.jpg" class="img-fluid" alt=""></a></div>
+                                    <h5><a href="instructor-detail.html">آدام ولیسون</a></h5>
+                                </div>
+                                <div class="cources_info_style3">
+                                    <ul>
+                                        <li>
+                                            <div class="foot_lecture"><i class="ti-control-skip-forward ml-2"></i>70
+                                                دوره
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Cource Grid 1 -->
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="education_block_list_layout">
+
+                        <div class="education_block_thumb n-shadow">
+                            <a href="course-detail.html"><img src="assets/img/co-7.jpg" class="img-fluid" alt=""></a>
+                        </div>
+
+                        <div class="list_layout_ecucation_caption">
+
+                            <div class="education_block_body">
+                                <h4 class="bl-title"><a href="course-detail.html">آموزش ساخت فروشگاه دیجی استایل با
+                                    لاراول</a></h4>
+                                <div class="course_rate_system">
+                                    <div class="course_ratting">
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star filled"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="course_reviews_info">
+                                        <strong class="mid">4.7</strong>(3,750 امتیاز ثبت شده)
+                                    </div>
+                                </div>
+                                <div class="cources_price">630ت
+                                    <div class="less_offer">851ت</div>
+                                </div>
+                            </div>
+
+                            <div class="education_block_footer mt-3">
+                                <div class="education_block_author">
+                                    <div class="path-img"><a href="instructor-detail.html"><img
+                                            src="assets/img/user-6.jpg" class="img-fluid" alt=""></a></div>
+                                    <h5><a href="instructor-detail.html">الهام کریمی</a></h5>
+                                </div>
+                                <div class="cources_info_style3">
+                                    <ul>
+                                        <li>
+                                            <div class="foot_lecture"><i class="ti-control-skip-forward ml-2"></i>26
+                                                دوره
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ============================ Featured Courses End ================================== -->
+
+    <!-- ============================== Start Newsletter ================================== -->
+    <section class="newsletter theme-bg inverse-theme">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-8 col-sm-12">
+                    <div class="text-center">
+                        <h2>به جامعه هزاران دانشجو بپیوندید!</h2>
+                        <p>به جامعه میلیونی دانشجویان ما بپیوندید و به هزاران ساعت آموزش در حوزه‌های گوناگون دسترسی
+                            داشته باشید.</p>
+                        <form class="sup-form">
+                            <input type="email" class="form-control sigmup-me" placeholder="ایمیل" required="required">
+                            <input type="submit" class="btn btn-theme" value="عضویت">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================================= End Newsletter =============================== -->
+
+{% endblock%}
